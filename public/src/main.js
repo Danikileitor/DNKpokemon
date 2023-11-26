@@ -9,4 +9,6 @@ function setup() {
   new player();
 }
 function step() {
+  var p = new position(null, 0, 0);
+  imageSet.draw("Outside", p, 1, 0);
 }
