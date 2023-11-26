@@ -5,7 +5,7 @@ function setup() {
   new rawImage("Characters", "boy_run");
 
   new imageSet("Tilesets", "Outside", 8, 502);
-  new rawMap("testMap");
+  new rawMap("test", "testMap");
 
   new player();
 }

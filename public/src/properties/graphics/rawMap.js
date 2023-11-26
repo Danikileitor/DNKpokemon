@@ -8,10 +8,10 @@ class rawMap {
         } else file += "/";
         this.file = file;
         this.name = name;
+        this.loaded = false;
         this.raw = loadJSON("res/Maps/" + file + name + ".json", () => {
             this.loaded = true;
         });
-        this.loaded = false;
         rawMaps[name] = this;
     }
 }
