@@ -2,8 +2,10 @@ var canvas;
 var img;
 function setup() {
   canvas = createCanvas(500, 500);
-  canvas.drop(function (file) {
-    img = createImg(file.data).hide();
+  canvas.drop(handleFile);
+}
+function handleFile(file) {
+  img = loadImage(file.data, function () {
     canvas.size(img.width, img.height);
     console.log("Width", img.width / 32, "Height", img.height / 32);
   });
