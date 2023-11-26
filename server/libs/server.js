@@ -6,7 +6,7 @@
 
 */
 
-(function() {
+(function () {
   var express = require('express');
   var socket = require('socket.io');
 
@@ -19,11 +19,11 @@
   var io;
   var lst = [];
   var name = "";
-  module.exports.init = function(p, n, c) {
-    if(n) name = n;
-    if(p) port = p;
+  module.exports.init = function (p, n, c) {
+    if (n) name = n;
+    if (p) port = p;
     var m = "";
-    if(n) m = ": " + name;
+    if (n) m = ": " + name;
     c = c || color.blue;
     server = app.listen(port, () => console.log(c, "Starting Server" + m));
     io = socket(server);
@@ -33,17 +33,17 @@
 
     function newConnection(socket) {
       // module.exports.keywords(socket);
-      for(var i=0; i<lst.length; i++) {
+      for (var i = 0; i < lst.length; i++) {
         socket.on(lst[i].key, lst[i].func);
       }
       console.log(color.green, socket.id);
     };
-    module.exports.send = function(data, key) {
-      if(!key) key = "send";
+    module.exports.send = function (data, key) {
+      if (!key) key = "send";
       io.sockets.emit(key, data);
     };
   }
-  module.exports.on = function(key, fnc) {
+  module.exports.on = function (key, fnc) {
     lst.push({
       key: key,
       func: fnc

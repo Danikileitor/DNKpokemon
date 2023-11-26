@@ -1,4 +1,3 @@
-
 var server = require("./libs/server");
 var color = require("./libs/color");
 
