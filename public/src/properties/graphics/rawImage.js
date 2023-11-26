@@ -17,5 +17,4 @@ class rawImage {
     this.loaded = false;
     rawImages[name] = this;
   }
-
 }

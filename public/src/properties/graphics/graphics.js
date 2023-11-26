@@ -1,4 +1,3 @@
-
 class graphics {
   constructor(parent, pos, img) {
     this.parent = parent;
@@ -6,7 +5,7 @@ class graphics {
     this.img = rawImages[img];
   }
   draw() {
-    if(!this.img.loaded) return;
+    if (!this.img.loaded) return;
     image(this.img.raw, this.position.x, this.position.y);
   }
 }

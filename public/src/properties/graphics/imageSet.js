@@ -1,4 +1,3 @@
-
 var imageSets = {};
 
 class imageSet {
@@ -14,8 +13,8 @@ class imageSet {
     this.split.draw(pos, x, y);
   }
   static draw(name, pos, cx, cy) {
-    if(imageSets[name]) {
-    imageSets[name].draw(cx, cy, pos);
+    if (imageSets[name]) {
+      imageSets[name].draw(cx, cy, pos);
     }
   }
 }
