@@ -9,7 +9,7 @@ class rawImage {
     this.file = file;
     this.name = name;
     this.dir = dir;
-    this.raw = loadImage("res/" + dir + file + name + ".png", () => {
+    this.raw = loadImage("res/Graphics/" + dir + file + name + ".png", () => {
       this.loaded = true;
       this.width = this.raw.width;
       this.height = this.raw.height;
