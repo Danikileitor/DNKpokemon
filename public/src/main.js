@@ -1,4 +1,3 @@
-
 client.init("localhost:3000");
 
 function setup() {
